@@ -10,7 +10,7 @@ ZoomMtg.setZoomJSLib('https://source.zoom.us/2.4.5/lib', '/av')
 var signatureEndpoint = 'https://signature-developing-applic.herokuapp.com/'
 var sdkKey = 'ZWsGLbevwzZA2hgVk6ljRBPaXim5Pa4cpgsd'
 var meetingNumber = '2796149035'
-var role = 0
+var role = 1
 var leaveUrl = 'https://azgr.github.io/'
 var userName = 'DKR'
 var userEmail = ''
