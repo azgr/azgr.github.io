@@ -1,0 +1,33 @@
+html, body {
+  min-width: 0 !important;
+}
+
+#zmmtg-root {
+  display: none;
+}
+
+main {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+main button {
+  margin-top: 20px;
+  background-color: #2D8CFF;
+  color: #ffffff;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-block;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+main button:hover {
+  background-color: #2681F2;
+}
