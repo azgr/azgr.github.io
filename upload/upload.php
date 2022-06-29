@@ -25,7 +25,7 @@ if(isset($_POST['submit'])) {
 				$fileNameNew=$fileName;
 				//za upload fajla sa unikatnim imenom
 				//$fileNameNew=uniqid('', true).".".$fileActualExt;
-				$fileDestination='C:\Users\lenov\OneDrive - Masterwerk GmbH\Nova fascikla/'.$fileNameNew;
+				$fileDestination='C:\Users\lenov\Documents\GitHub\azgr.github.io\upload\uploads'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
 				header("Location: https://azgr.github.io/upload/");
 			} else {
