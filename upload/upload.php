@@ -27,7 +27,7 @@ if(isset($_POST['submit'])) {
 				//$fileNameNew=uniqid('', true).".".$fileActualExt;
 				$fileDestination='C:\Users\lenov\OneDrive - Masterwerk GmbH\Nova fascikla/'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
-				header("Location: https://azgr.github.io/upload/upload.php");
+				header("Location: https://azgr.github.io/upload");
 			} else {
 				echo "Your file is too big!";
 			}
