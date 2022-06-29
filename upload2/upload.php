@@ -7,4 +7,4 @@ $file = $_FILES["file"];
 move_uploaded_file($file["tmp_name"], "uploads/" . $file["name"]);
 
 // Redirecting back
-    header("Location: https://azgr.github.io/upload2/");
+    header("Location: https://azgr.github.io/upload2/upload.php");
