@@ -27,7 +27,7 @@ if(isset($_POST['submit'])) {
 				//$fileNameNew=uniqid('', true).".".$fileActualExt;
 				$fileDestination='C:\Users\lenov\OneDrive - Masterwerk GmbH\Nova fascikla/'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
-				header("Location: index.html");
+				header("Location: " . $_SERVER["HTTP_REFERER"]);
 			} else {
 				echo "Your file is too big!";
 			}
