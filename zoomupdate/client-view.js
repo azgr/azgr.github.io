@@ -20,6 +20,20 @@ var passWord = 'agr'
 // Webinars: https://marketplace.zoom.us/docs/sdk/native-sdks/web/client-view/webinars#join-webinar-with-registration-required
 var registrantToken = ''
 
+public void hideOrShowToolbar(boolean hidden) {
+    removeCallbacks(autoHidden);
+    if (hidden) {
+        setVisibility(View.INVISIBLE);
+    } else {
+        postDelayed(autoHidden, 3000);
+        setVisibility(View.VISIBLE);
+        bringToFront();
+    }
+    if (null != mCallBack) {
+        mCallBack.onHidden(hidden);
+    }
+}
+
 function getSignature() {
   fetch(signatureEndpoint, {
     method: 'POST',
@@ -70,17 +84,4 @@ function startMeeting(signature) {
   })
 }
 
-public void hideOrShowToolbar(boolean hidden) {
-    removeCallbacks(autoHidden);
-    if (hidden) {
-        setVisibility(View.INVISIBLE);
-    } else {
-        postDelayed(autoHidden, 3000);
-        setVisibility(View.VISIBLE);
-        bringToFront();
-    }
-    if (null != mCallBack) {
-        mCallBack.onHidden(hidden);
-    }
-}
 
