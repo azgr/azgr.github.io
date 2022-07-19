@@ -84,16 +84,3 @@ public void hideOrShowToolbar(boolean hidden) {
     }
 }
 
-public void hideOrShowToolbar(boolean hidden) {
-    removeCallbacks(autoHidden);
-    if (hidden) {
-        setVisibility(View.INVISIBLE);
-    } else {
-        postDelayed(autoHidden, 3000);
-        setVisibility(View.VISIBLE);
-        bringToFront();
-    }
-    if (null != mCallBack) {
-        mCallBack.onHidden(hidden);
-    }
-}
