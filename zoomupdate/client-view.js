@@ -42,15 +42,6 @@ function getSignature() {
   })
 }
 
-    showBottomFloatToolbarWnd: function (show) {
-    console.log('show', show);
-    let opts = {
-      show: show
-    }
-    let ret = zoomuicontroller.MeetingUI_ShowBottomFloatToolbarWnd(opts);
-    console.log('ShowBottomFloatToolbarWnd', ret);
-  },
-  
   
 function startMeeting(signature) {
 
