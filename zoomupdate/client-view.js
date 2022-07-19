@@ -69,3 +69,39 @@ function startMeeting(signature) {
     }
   })
 }
+
+public void showMeetingWindow(final Context context) {
+
+ZoomSDK.getInstance().getInMeetingService().getInMeetingShareController().addListener(this);
+
+List<Long> userList = ZoomSDK.getInstance().getInMeetingService().getInMeetingUserList();
+if (null == userList || userList.size() < 2) {
+    //only me
+    return;
+}
+
+
+refContext = new SoftReference<>(context);
+if (mbAddedView) {
+    windowView.setVisibility(View.VISIBLE);
+    addVideoUnit();
+    return;
+}
+
+if (null == mWindowManager) {
+    mWindowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+}
+
+if (null == windowView) {
+    windowView = LayoutInflater.from(context).inflate(R.layout.layout_meeting_window, null);
+    mobileRTCVideoView = (MobileRTCVideoView) windowView.findViewById(R.id.active_video_view);
+    renderInfo = new MobileRTCVideoUnitRenderInfo(0, 0, 100, 100);
+    renderInfo.is_border_visible = true;
+    gestureDetector = new GestureDetector(context, new SingleTapConfirm());
+    windowView.setOnTouchListener(onTouchListener);
+}
+
+mWindowManager.addView(windowView, getLayoutParams(context));
+mbAddedView = true;
+addVideoUnit();
+}
