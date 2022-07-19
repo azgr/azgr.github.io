@@ -20,8 +20,15 @@ var passWord = 'agr'
 // Webinars: https://marketplace.zoom.us/docs/sdk/native-sdks/web/client-view/webinars#join-webinar-with-registration-required
 var registrantToken = ''
 
-
-
+  showBottomFloatToolbarWnd: function (show) {
+    console.log('show', show);
+    let opts = {
+      show: show
+    }
+    let ret = zoomuicontroller.MeetingUI_ShowBottomFloatToolbarWnd(opts);
+    console.log('ShowBottomFloatToolbarWnd', ret);
+  },
+  
 function getSignature() {
   fetch(signatureEndpoint, {
     method: 'POST',
