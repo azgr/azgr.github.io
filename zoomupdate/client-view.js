@@ -20,7 +20,8 @@ var passWord = 'agr'
 // Webinars: https://marketplace.zoom.us/docs/sdk/native-sdks/web/client-view/webinars#join-webinar-with-registration-required
 var registrantToken = ''
 
-  showBottomFloatToolbarWnd: function (show) {
+
+    showBottomFloatToolbarWnd: function (show) {
     console.log('show', show);
     let opts = {
       show: show
