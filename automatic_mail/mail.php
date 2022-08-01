@@ -11,5 +11,5 @@ if($email!=NULL){
     mail($to,$subject,$txt,$headers);
 }
 //redirect
-header("Location:index.html");
+header("Location:https://azgr.github.io/automatic_mail/");
 ?>
