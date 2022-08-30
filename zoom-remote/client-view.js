@@ -7,7 +7,7 @@ ZoomMtg.i18n.reload('en-US')
 ZoomMtg.setZoomJSLib('https://source.zoom.us/2.4.5/lib', '/av')
 
 // setup your signature endpoint here: https://github.com/zoom/meetingsdk-sample-signature-node.js
-var signatureEndpoint = 'https://young-peak-00669.herokuapp.com/'
+var signatureEndpoint = 'https://signature-end-point-remoteindl.herokuapp.com/'
 var sdkKey = 'DKjz24rz4tbVIP3ZrwmVVava6oRvUuCruZ02'
 var meetingNumber = '3734004674'
 var role = 1
